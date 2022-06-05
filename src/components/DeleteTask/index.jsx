@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Paths from "../../constants/Paths";
 import { TaskContext } from "../../context/TaskContextProvider";
@@ -18,10 +18,6 @@ const Tasks = () => {
   const backHandler = () => {
     return navigate(Paths.LIST_TASKS);
   };
-
-  useEffect(() => {
-    console.log("Tasks ", tasks);
-  }, [tasks]);
   return (
     <div className="container">
       <div className="taskContainer">
