@@ -1,0 +1,35 @@
+.container {
+  min-height: 100vh;
+  max-height: 100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+}
+
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.taskContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btnItem {
+  margin: 1rem;
+  padding: 1rem;
+  width: 20%;
+}
