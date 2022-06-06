@@ -1,9 +1,9 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import ReadTaskPage from "./pages/Tasks/ReadTaskPage";
+import Paths from "./constants/Paths";
 import CreateTaskPage from "./pages/Tasks/CreateTaskPage";
 import DeleteTaskPage from "./pages/Tasks/DeleteTaskPage";
-import Paths from "./constants/Paths";
+import ReadTaskPage from "./pages/Tasks/ReadTaskPage";
 
 function App() {
   return (

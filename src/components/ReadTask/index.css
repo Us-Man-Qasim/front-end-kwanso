@@ -11,13 +11,6 @@
   padding: 1rem;
 }
 
-.notFoundContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-}
-
 .taskContainer {
   display: flex;
   flex-wrap: wrap;

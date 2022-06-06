@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./deleteTaskCard.css";
 
-const TaskCard = ({ task, setCheckedIds, tasks }) => {
+const DeleteTaskCard = ({ task, setCheckedIds, tasks }) => {
   const [check, setCheck] = useState(false);
   const onChecked = (id) => {
     setCheckedIds((prevStat) => [...prevStat, id]);
@@ -20,9 +20,7 @@ const TaskCard = ({ task, setCheckedIds, tasks }) => {
     setCheck(false);
   };
 
-  useEffect(() => {
-    setCheck(false);
-  }, [tasks]);
+  useEffect(() => setCheck(false), [tasks]);
 
   return (
     <>
@@ -40,4 +38,4 @@ const TaskCard = ({ task, setCheckedIds, tasks }) => {
   );
 };
 
-export default TaskCard;
+export default DeleteTaskCard;

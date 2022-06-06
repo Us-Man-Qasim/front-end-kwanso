@@ -1,8 +1,8 @@
 import React from "react";
 import ReadTask from "../../components/ReadTask";
 
-const CreateTaskPage = () => {
+const ReadTaskPage = () => {
   return <ReadTask />;
 };
 
-export default CreateTaskPage;
+export default ReadTaskPage;

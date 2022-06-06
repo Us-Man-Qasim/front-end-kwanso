@@ -1,8 +1,8 @@
 import React from "react";
 import DeleteTask from "../../components/DeleteTask";
 
-const CreateTaskPage = () => {
+const DeleteTaskPage = () => {
   return <DeleteTask />;
 };
 
-export default CreateTaskPage;
+export default DeleteTaskPage;

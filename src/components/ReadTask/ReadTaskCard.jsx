@@ -1,7 +1,7 @@
 import React from "react";
 import "./taskCard.css";
 
-const TaskCard = ({ task }) => {
+const ReadTaskCard = ({ task }) => {
   return (
     <div className="content">
       <h3>{task.name}</h3>
@@ -9,4 +9,4 @@ const TaskCard = ({ task }) => {
   );
 };
 
-export default TaskCard;
+export default ReadTaskCard;

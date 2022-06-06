@@ -5,7 +5,7 @@ import Paths from "../../constants/Paths";
 import { TaskContext } from "../../context/TaskContextProvider";
 import "./index.css";
 
-const CreateTaskPage = () => {
+const CreateTask = () => {
   const { setTasks } = useContext(TaskContext);
   const name = useRef(null);
   const [errorMessage, setErrorMessage] = useState("");
@@ -24,13 +24,9 @@ const CreateTaskPage = () => {
     return navigate(Paths.LIST_TASKS);
   };
 
-  const onChangeHandler = (e) => {
-    name.current = e.target.value;
-  };
+  const onChangeHandler = (e) => (name.current = e.target.value);
 
-  const backHandler = () => {
-    return navigate(Paths.LIST_TASKS);
-  };
+  const backHandler = () => navigate(Paths.LIST_TASKS);
 
   return (
     <div className="app">
@@ -48,4 +44,4 @@ const CreateTaskPage = () => {
   );
 };
 
-export default CreateTaskPage;
+export default CreateTask;

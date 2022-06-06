@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import Paths from "../../constants/Paths";
 import { TaskContext } from "../../context/TaskContextProvider";
 import "./index.css";
-import TaskCard from "./TaskCard";
+import ReadTaskCard from "./ReadTaskCard";
 
-const ReadTaskPage = () => {
+const ReadTask = () => {
   const { tasks } = useContext(TaskContext);
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const ReadTaskPage = () => {
     <div className="container">
       <div className="taskContainer">
         {tasks.length ? (
-          tasks.map((task, index) => <TaskCard task={task} key={index} />)
+          tasks.map((task, index) => <ReadTaskCard task={task} key={index} />)
         ) : (
           <h1 style={{ margin: "auto" }}>No task found</h1>
         )}
@@ -33,4 +33,4 @@ const ReadTaskPage = () => {
   );
 };
 
-export default ReadTaskPage;
+export default ReadTask;

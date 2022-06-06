@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Paths from "../../constants/Paths";
 import { TaskContext } from "../../context/TaskContextProvider";
 import DeleteTaskCard from "./DeleteTaskCard";
 import "./index.css";
 
-const Tasks = () => {
+const DeleteTasks = () => {
   const { tasks, setTasks } = useContext(TaskContext);
   const navigate = useNavigate();
   const [checkedIds, setCheckedIds] = useState([]);
@@ -15,13 +15,8 @@ const Tasks = () => {
     setTasks(remaining);
   };
 
-  const backHandler = () => {
-    return navigate(Paths.LIST_TASKS);
-  };
+  const backHandler = () => navigate(Paths.LIST_TASKS);
 
-  useEffect(() => {
-    console.log(checkedIds);
-  }, [checkedIds]);
   return (
     <div className="container">
       <div className="taskContainer">
@@ -50,4 +45,4 @@ const Tasks = () => {
   );
 };
 
-export default Tasks;
+export default DeleteTasks;
