@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./deleteTaskCard.css";
 
-const TaskCard = ({ task, setCheckedIds }) => {
+const TaskCard = ({ task, setCheckedIds, tasks }) => {
   const [check, setCheck] = useState(false);
   const onChecked = (id) => {
     setCheckedIds((prevStat) => [...prevStat, id]);
@@ -19,6 +19,10 @@ const TaskCard = ({ task, setCheckedIds }) => {
 
     setCheck(false);
   };
+
+  useEffect(() => {
+    setCheck(false);
+  }, [tasks]);
 
   return (
     <>
