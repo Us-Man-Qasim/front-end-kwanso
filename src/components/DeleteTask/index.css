@@ -28,12 +28,11 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .btnItem {
-    width: 60%;
-    margin: 1rem 0;
-  }
-
   .btnContainer {
     flex-direction: column;
+  }
+  .btnItem {
+    width: 60%;
+    margin: 1rem 0 !important;
   }
 }
